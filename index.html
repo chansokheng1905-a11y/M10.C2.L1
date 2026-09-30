@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>វិញ្ញាសាតេស្តតក្កវិទ្យាថ្នាក់ទី១០ (៧០ សំណួរ) - រៀបរៀងដោយ ចាន់ សុខហេង</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Kantumruy Pro & Moul -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Moul&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- KaTeX for Fast Mathematical Logic Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- html2canvas for Image Download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0A0F1D',
+              card: '#111827',
+              border: '#1E293B',
+              primary: '#6366F1',
+              cyan: '#06B6D4',
+              gold: '#F59E0B'
+            }
+          },
+          fontFamily: {
+            sans: ['Kantumruy Pro', 'sans-serif'],
+            moul: ['Moul', 'serif'],
+            mono: ['Share Tech Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0F1D;
+      color: #F8FAFC;
+      font-family: 'Kantumruy Pro', sans-serif;
+    }
+    .font-moul { font-family: 'Moul', serif; }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .option-card {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .option-card:hover {
+      border-color: #6366F1;
+      transform: translateY(-2px);
+      background-color: rgba(99, 102, 241, 0.1);
+    }
+    .option-card.selected {
+      border-color: #06B6D4;
+      background-color: rgba(6, 182, 212, 0.15);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+    }
+    .certificate-border {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 50%, #1e1b4b 100%);
+      border: 3px solid #F59E0B;
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.25);
+    }
+    .interactive-table th, .interactive-table td {
+      border: 1px solid #334155;
+      padding: 8px 14px;
+      text-align: center;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 15px;
+    }
+    .interactive-table th {
+      background-color: #1e293b;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+    .table-cell-input {
+      width: 44px;
+      height: 38px;
+      background-color: #0f172a;
+      border: 2px solid #6366f1;
+      border-radius: 8px;
+      color: #38bdf8;
+      font-weight: bold;
+      text-align: center;
+      font-size: 18px;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .table-cell-input:focus {
+      border-color: #06b6d4;
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+      background-color: #1e1b4b;
+    }
+    @media print {
+      body { background-color: #FFFFFF !important; color: #000000 !important; }
+      .no-print { display: none !important; }
+      #printable-certificate { display: block !important; border: 2px solid #000 !important; padding: 20px !important; color: #000 !important; }
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A0F1D; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 999px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-primary selection:text-white">
+
+  <!-- HEADER -->
+  <header class="w-full glass-card border-b border-slate-800/80 px-4 lg:px-8 py-3.5 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-cyan flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+          <i data-lucide="binary" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h1 class="text-sm sm:text-base font-bold text-white tracking-wide">គណិតវិទ្យាថ្នាក់ទី១០ · តក្កវិទ្យា (៧០ សំណួរ)</h1>
+          <p class="text-[11px] text-brand-gold font-semibold flex items-center gap-1">
+            <i data-lucide="award" class="w-3 h-3"></i>
+            <span>រៀបរៀងដោយ ចាន់ សុខហេង</span>
+          </p>
+        </div>
+      </div>
+
+      <div id="quiz-header-status" class="hidden flex items-center gap-3">
+        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-mono text-brand-cyan">
+          <i data-lucide="clock" class="w-3.5 h-3.5 animate-spin"></i>
+          <span id="timer-display">90:00</span>
+        </div>
+        <div class="px-3 py-1.5 rounded-xl bg-indigo-950 border border-indigo-700 text-indigo-300 text-xs font-bold">
+          <span id="header-stage-badge">សំណួរ ១/៧០</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-5xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+
+    <!-- ======================================================== -->
+    <!-- ផ្ទាំងទី១៖ បំពេញព័ត៌មានសិស្ស និងសេចក្តីណែនាំ -->
+    <!-- ======================================================== -->
+    <section id="view-profile" class="space-y-6">
+      <div class="text-center space-y-2">
+        <span class="px-3.5 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold border border-indigo-500/20 uppercase tracking-widest">
+          ជំពូកទី២ · មេរៀនទី១ (តារាងភាពពិត 0 & 1)
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-moul leading-relaxed">
+          វិញ្ញាសាតេស្តតក្កវិទ្យាពេញលេញ
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto">
+          វិញ្ញាសាមានចំនួនសរុប <strong>៧០ សំណួរ</strong> រួមមាន <strong>៥០ សំណួរពហុជ្រើសរើស (ឆ្លាស់ទីតាំងចម្លើយចៃដន្យ)</strong> និង <strong>២០ សំណួរតារាងភាពពិតបំពេញលេខ 0 និង 1 ដោយផ្ទាល់</strong>។ សិស្សត្រូវឆ្លើយគ្រប់ ៧០ សំណួរទើបអាចបញ្ចប់វិញ្ញាសា។
+        </p>
+      </div>
+
+      <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl space-y-6">
+        <h3 class="text-sm font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+          <i data-lucide="user-check" class="w-4 h-4 text-brand-cyan"></i>
+          <span>ព័ត៌មានបេក្ខជន</span>
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div>
+            <label class="block text-slate-300 font-bold mb-1.5">គោត្តនាម និងនាមសិស្ស *</label>
+            <input type="text" id="stu-name" placeholder="ឧ. ចាន់ វណ្ណា" class="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-primary">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-bold mb-1.5">ភេទ *</label>
+            <select id="stu-gender" class="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none">
+              <option value="ប្រុស">ប្រុស</option>
+              <option value="ស្រី">ស្រី</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-300 font-bold mb-1.5">ថ្នាក់ទី *</label>
+            <input type="text" id="stu-grade" value="១០ A" placeholder="ឧ. ១០ A" class="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-bold mb-1.5">សាលារៀន *</label>
+            <input type="text" id="stu-school" placeholder="ឧ. វិទ្យាល័យបឹងត្របែក" class="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none">
+          </div>
+        </div>
+
+        <!-- 6 Sections Overview Cards -->
+        <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2.5">
+          <span class="text-xs font-bold text-amber-400 block">រចនាសម្ព័ន្ធវិញ្ញាសាទាំង ៧០ សំណួរ៖</span>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-[11px]">
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-emerald-500/30 text-emerald-300">
+              <strong class="block">កម្រិត ១ (១-១០)</strong>
+              <span class="text-slate-400">គ្រឹះមូលដ្ឋាន (MCQ)</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-blue-500/30 text-blue-300">
+              <strong class="block">កម្រិត ២ (១១-២០)</strong>
+              <span class="text-slate-400">ឈ្នាប់នាំឱ្យ & សមមូល</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-amber-500/30 text-amber-300">
+              <strong class="block">កម្រិត ៣ (២១-៣០)</strong>
+              <span class="text-slate-400">តូតូឡូជី & ផ្ទុយ</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-orange-500/30 text-orange-300">
+              <strong class="block">កម្រិត ៤ (៣១-៤០)</strong>
+              <span class="text-slate-400">សមមូលស្មុគស្មាញ</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900 border border-rose-500/30 text-rose-300">
+              <strong class="block">កម្រិត ៥ (៤១-៥០)</strong>
+              <span class="text-slate-400">វិធានវែកញែក</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-indigo-950 border-2 border-brand-cyan text-brand-cyan">
+              <strong class="block font-bold">កម្រិត ៦ (៥១-៧០)</strong>
+              <span class="text-slate-300">បំពេញតារាង 0 & 1 ផ្ទាល់</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="startQuiz()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-brand-primary to-indigo-600 hover:from-indigo-500 hover:to-indigo-400 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2 transition transform active:scale-95">
+          <span>ចាប់ផ្តើមធ្វើតេស្ត ៧០ សំណួរ (START EXAM)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+
+        <div class="text-center text-[11px] text-brand-gold font-semibold pt-2 border-t border-slate-800/80">
+          រៀបរៀងដោយ ចាន់ សុខហេង
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- ផ្ទាំងកណ្តាល៖ កម្មវិធីលំហាត់ ៧០ សំណួរ (MCQ & TABLE ARENA) -->
+    <!-- ======================================================== -->
+    <section id="view-quiz" class="hidden space-y-5">
+      <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+        <span>សំណួរទី <strong id="current-q-num" class="text-white text-base">1</strong> / <strong>70</strong></span>
+        <span id="quiz-level-indicator" class="font-bold text-emerald-400">កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន</span>
+      </div>
+      <div class="w-full h-2.5 rounded-full bg-slate-800 overflow-hidden">
+        <div id="progress-bar" class="h-full bg-gradient-to-r from-brand-primary via-brand-cyan to-emerald-400 transition-all duration-300" style="width: 1.4%;"></div>
+      </div>
+
+      <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl space-y-6">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <span id="badge-level-tag" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-[11px] font-bold">
+              កម្រិត ១
+            </span>
+            <span class="text-xs text-slate-400">ឆ្លើយបាន ៖ <strong id="answered-count-badge" class="text-white">0</strong>/70</span>
+          </div>
+
+          <h3 id="question-text" class="text-base sm:text-lg font-bold text-white leading-relaxed font-sans">
+            <!-- Rendered by JS -->
+          </h3>
+        </div>
+
+        <!-- ZONE 1: FOR REGULAR MCQ (Questions 1 to 50) -->
+        <div id="options-container" class="grid grid-cols-1 gap-3">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- ZONE 2: FOR INTERACTIVE TABLE FILLING (Questions 51 to 70) -->
+        <div id="table-interactive-container" class="hidden flex-col items-center justify-center space-y-4">
+          <div class="text-xs text-amber-300 font-semibold flex items-center gap-1.5 bg-amber-950/40 px-3.5 py-1.5 rounded-xl border border-amber-500/30">
+            <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+            <span>សូមវាយបញ្ចូលលេខ <strong>1 (ពិត)</strong> ឬ <strong>0 (មិនពិត)</strong> ទៅក្នុងប្រអប់នីមួយៗ ៖</span>
+          </div>
+
+          <div id="table-display-mount" class="overflow-x-auto my-2 flex justify-center w-full">
+            <!-- Rendered Table with Inputs -->
+          </div>
+
+          <!-- Quick Touch Numeric Buttons (Mobile friendly) -->
+          <div class="flex items-center gap-2 pt-1">
+            <span class="text-xs text-slate-400">ប៊ូតុងជំនួយរហ័ស ៖</span>
+            <button type="button" onclick="setFocusedInputValue('1')" class="px-3.5 py-1 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-mono font-bold text-xs shadow">លេខ 1</button>
+            <button type="button" onclick="setFocusedInputValue('0')" class="px-3.5 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-mono font-bold text-xs border border-slate-700">លេខ 0</button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-4 border-t border-slate-800/80">
+          <button id="btn-prev" onclick="navigateQuestion(-1)" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-xs font-bold text-slate-300 border border-slate-700 flex items-center gap-1.5 transition disabled:opacity-30 disabled:cursor-not-allowed">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            <span>ថយក្រោយ</span>
+          </button>
+          
+          <div class="text-[11px] text-brand-gold font-semibold hidden sm:block">
+            រៀបរៀងដោយ ចាន់ សុខហេង
+          </div>
+
+          <button id="btn-next" onclick="navigateQuestion(1)" class="px-6 py-2.5 rounded-xl bg-brand-primary hover:bg-indigo-500 text-xs font-bold text-white shadow-lg shadow-indigo-600/30 flex items-center gap-1.5 transition">
+            <span id="btn-next-label">សំណួរបន្ទាប់</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- ផ្ទាំងចុងក្រោយ៖ បង្ហាញព័ត៌មានសិស្ស និងលទ្ធផល + ទាញយក -->
+    <!-- ======================================================== -->
+    <section id="view-result" class="hidden space-y-6">
+      
+      <!-- CERTIFICATE / SCORE SHEET CONTAINER (FOR IMAGE EXPORT) -->
+      <div id="printable-certificate" class="certificate-border p-6 sm:p-10 rounded-3xl shadow-2xl space-y-6 text-white relative overflow-hidden">
+        
+        <div class="absolute top-2 left-3 text-brand-gold text-xl select-none">⚜</div>
+        <div class="absolute top-2 right-3 text-brand-gold text-xl select-none">⚜</div>
+        <div class="absolute bottom-2 left-3 text-brand-gold text-xl select-none">⚜</div>
+        <div class="absolute bottom-2 right-3 text-brand-gold text-xl select-none">⚜</div>
+
+        <div class="text-center space-y-2 border-b border-amber-500/30 pb-5">
+          <div class="w-16 h-16 rounded-3xl bg-gradient-to-tr from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 mx-auto mb-2 shadow-lg shadow-amber-500/30">
+            <i data-lucide="award" class="w-9 h-9"></i>
+          </div>
+          <h2 id="certificate-heading" class="text-xl sm:text-3xl font-extrabold text-amber-400 font-moul tracking-wide">
+            បណ្ណសរសើរ / ព្រឹត្តិបត្រលទ្ធផល
+          </h2>
+          <p class="text-xs text-slate-300">វិញ្ញាសាតេស្តតក្កវិទ្យាពេញលេញ (៧០ សំណួរ) · គណិតវិទ្យាថ្នាក់ទី១០ ជំពូកទី២</p>
+        </div>
+
+        <!-- Student Metadata Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-black/40 border border-amber-500/30 text-xs">
+          <div><span class="text-slate-400 block">បេក្ខជន ៖</span> <strong id="res-stu-name" class="text-white text-sm">--</strong></div>
+          <div><span class="text-slate-400 block">ភេទ / ថ្នាក់ ៖</span> <strong id="res-stu-class" class="text-white text-sm">--</strong></div>
+          <div><span class="text-slate-400 block">សាលារៀន ៖</span> <strong id="res-stu-school" class="text-white text-sm">--</strong></div>
+          <div><span class="text-slate-400 block">វិញ្ញាសា ៖</span> <strong class="text-amber-400 text-sm">៧០ សំណួរ (តារាងភាពពិត 0 & 1)</strong></div>
+        </div>
+
+        <!-- Score & Statistics Highlights -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div class="p-4 rounded-2xl bg-black/40 border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">ពិន្ទុសរុប</span>
+            <span id="res-score-badge" class="text-3xl font-black font-mono text-brand-cyan">0/70</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-black/40 border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">ភាគរយជោគជ័យ</span>
+            <span id="res-percentage-badge" class="text-3xl font-black font-mono text-emerald-400">0%</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-black/40 border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">និទ្ទេស / កម្រិត</span>
+            <span id="res-grade-badge" class="text-sm font-bold block mt-2 text-brand-gold">--</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-black/40 border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">ពេលចំណាយ</span>
+            <span id="res-time-spent" class="text-2xl font-black font-mono text-slate-300 mt-1 block">00:00</span>
+          </div>
+        </div>
+
+        <!-- Score Breakdown By Sections -->
+        <div class="p-4 rounded-2xl bg-black/40 border border-slate-800 space-y-2">
+          <span class="text-xs font-bold text-slate-300 block">លទ្ធផលតាមផ្នែកនីមួយៗ (Section Breakdown)៖</span>
+          <div class="grid grid-cols-2 sm:grid-cols-6 gap-2 text-center text-xs" id="levels-breakdown-row">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- Certificate Footer Credit -->
+        <div class="pt-4 border-t border-amber-500/30 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-300 gap-2">
+          <span>កាលបរិច្ឆេទ ៖ <strong id="res-date" class="text-white">--</strong></span>
+          <span class="text-brand-gold font-bold">រៀបរៀងដោយ ចាន់ សុខហេង</span>
+        </div>
+
+      </div>
+
+      <!-- Action Buttons (Download Image / Print / Restart) -->
+      <div class="flex flex-wrap items-center justify-center gap-3 no-print">
+        <button onclick="downloadAsImage()" id="btn-download-img" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2 transition transform hover:scale-105">
+          <i data-lucide="image-down" class="w-4 h-4"></i>
+          <span>ទាញយកជារូបភាព (Download PNG Image)</span>
+        </button>
+
+        <button onclick="window.print()" class="px-5 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 flex items-center justify-center gap-2 transition">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>Print / PDF</span>
+        </button>
+
+        <button onclick="restartFullExam()" class="px-5 py-3.5 rounded-2xl bg-brand-primary hover:bg-indigo-500 text-white font-bold text-xs shadow-xl flex items-center justify-center gap-2 transition">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+          <span>ធ្វើវិញ្ញាសាឡើងវិញ</span>
+        </button>
+      </div>
+
+      <!-- Detailed Review of 70 Questions -->
+      <div class="glass-card p-6 rounded-3xl border border-slate-800 space-y-3 no-print">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+          <span>កំណែចម្លើយលម្អិតទាំង ៧០ សំណួរ</span>
+        </h4>
+        <div id="answers-review-container" class="space-y-3 max-h-96 overflow-y-auto pr-1">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t border-slate-800/80 py-4 px-4 text-center text-xs text-slate-500 glass-card no-print mt-auto">
+    <p>កម្មវិធីតេស្តតក្កវិទ្យាថ្នាក់ទី១០ (តារាងភាពពិត) · រៀបរៀងដោយ <strong class="text-brand-gold">ចាន់ សុខហេង</strong></p>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- DATABASE & JAVASCRIPT LOGIC ENGINE -->
+  <!-- ======================================================== -->
+  <script>
+    // RAW DATABASE OF 70 QUESTIONS
+    const rawQuestions = [
+      // --- កម្រិត ១ (សំណួរ ១ ដល់ ១០) ---
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "តើឈ្នាប់តក្កវិទ្យា «មិន» (Negation) តាងដោយនិមិត្តសញ្ញាអ្វី?", options: ["$\\neg$ ឬ $\\sim$", "$\\land$", "$\\lor$", "$\\Rightarrow$"], correct: 0, exp: "ឈ្នាប់ «មិន» (សំណើបដិសេធ) តាងដោយនិមិត្តសញ្ញា $\\neg p$ ឬ $\\sim p$។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "បើប្រយោគ $p$ មានតម្លៃពិត $T$ (True) នោះតម្លៃពិតនៃ $\\neg p$ គឺ៖", options: ["$F$ (False)", "$T$ (True)", "មិនអាចកំណត់បាន", "$T$ ផង $F$ ផង"], correct: 0, exp: "សំណើបដិសេធ $\\neg p$ តែងតែមានតម្លៃពិតផ្ទុយពី $p$ ជានិច្ច។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "តើឈ្នាប់ «និង» (Conjunction) តាងដោយនិមិត្តសញ្ញាអ្វី?", options: ["$\\land$", "$\\lor$", "$\\Leftrightarrow$", "$\\Rightarrow$"], correct: 0, exp: "ឈ្នាប់ «និង» ក្នុងតក្កវិទ្យាតាងដោយសញ្ញា $\\land$ ($p \\land q$)។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "សំណើ $p \\land q$ ពិត ($T$) លុះត្រាតែ៖", options: ["ទាំង $p$ និង $q$ មានតម្លៃពិត $T$", "$p$ ពិត ឬ $q$ ពិត", "ទាំងពីរមិនពិត ($F$)", "$p$ មិនពិត តែ $q$ ពិត"], correct: 0, exp: "ឈ្នាប់ «និង» $p \\land q$ ពិតតែក្នុងករណីមួយគត់ គឺនៅពេលដែលសំណើផ្សំទាំងពីរពិតព្រមគ្នា។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "តើឈ្នាប់ «ឬ» (Disjunction) តាងដោយនិមិត្តសញ្ញាអ្វី?", options: ["$\\lor$", "$\\land$", "$\\neg$", "$\\Rightarrow$"], correct: 0, exp: "ឈ្នាប់ «ឬ» ក្នុងតក្កវិទ្យាតាងដោយសញ្ញា $\\lor$ ($p \\lor q$)។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "សំណើ $p \\lor q$ មិនពិត ($F$) លុះត្រាតែ៖", options: ["ទាំង $p$ និង $q$ មានតម្លៃមិនពិត ($F$) ព្រមគ្នា", "$p$ ពិត និង $q$ មិនពិត", "$p$ មិនពិត និង $q$ ពិត", "ទាំង $p$ និង $q$ ពិត ($T$)"], correct: 0, exp: "ឈ្នាប់ «ឬ» $p \\lor q$ មិនពិតតែមួយករណីគត់ គឺនៅពេលដែលសំណើទាំងពីរមិនពិត ($F$) ព្រមគ្នា។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "បើ $p$ ពិត ($T$) និង $q$ មិនពិត ($F$) នោះតម្លៃពិតនៃ $p \\land q$ គឺ៖", options: ["$F$", "$T$", "$T$ ឬ $F$", "គ្មានតម្លៃ"], correct: 0, exp: "$T \\land F = F$ (ព្រោះឈ្នាប់ «និង» ទាមទារឱ្យពិតទាំងពីរ)។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "បើ $p$ ពិត ($T$) និង $q$ មិនពិត ($F$) នោះតម្លៃពិតនៃ $p \\lor q$ គឺ៖", options: ["$T$", "$F$", "មិនអាចកំណត់បាន", "ស្មើ $0$"], correct: 0, exp: "$T \\lor F = T$ (ឈ្នាប់ «ឬ» ឱ្យតែមានសំណើមួយពិត នោះផលបូកតក្កវិទ្យានឹងពិត)។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "តើតារាងភាពពិតនៃសំណើដែលមាន ២ អថេរ ($p, q$) មានចំនួនជួរដេកសរុបប៉ុន្មាន?", options: ["$4$ ជួរ", "$2$ ជួរ", "$8$ ជួរ", "$6$ ជួរ"], correct: 0, exp: "ចំនួនជួរដេកនៃតារាងភាពពិតគណនាតាមរូបមន្ត $2^n$ ដោយ $n=2 \\implies 2^2 = 4$ ជួរដេក។" },
+      { level: 1, levelName: "កម្រិត ១ ៖ គ្រឹះមូលដ្ឋាន", q: "តម្លៃពិតនៃសំណើបដិសេធទ្វេ $\\neg(\\neg p)$ ស្មើនឹង៖", options: ["$p$", "$\\neg p$", "$F$", "$T$ ជានិច្ច"], correct: 0, exp: "ច្បាប់បដិសេធទ្វេ៖ $\\neg(\\neg p) \\equiv p$។" },
+
+      // --- កម្រិត ២ (សំណួរ ១១ ដល់ ២០) ---
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "តើឈ្នាប់ «នាំឱ្យ» (Conditional) $p \\Rightarrow q$ មិនពិត ($F$) ក្នុងករណីណា?", options: ["$p$ ពិត ($T$) ហើយ $q$ មិនពិត ($F$)", "$p$ មិនពិត ($F$) ហើយ $q$ ពិត ($T$)", "ទាំងពីរពិត ($T$)", "ទាំងពីរមិនពិត ($F$)"], correct: 0, exp: "សំណើលក្ខខណ្ឌ $p \\Rightarrow q$ មិនពិតតែមួយករណីគត់ គឺ «សម្មតិកម្មពិត តែសេចក្តីសន្និដ្ឋានមិនពិត» ($T \\Rightarrow F \\equiv F$)។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "បើ $p$ មិនពិត ($F$) និង $q$ មិនពិត ($F$) នោះតម្លៃពិតនៃ $p \\Rightarrow q$ គឺ៖", options: ["$T$", "$F$", "មិនអាចគិតបាន", "ស្មើ $0$"], correct: 0, exp: "បើ $p$ មិនពិត ($F$) នោះ $F \\Rightarrow F$ តែងតែមានតម្លៃពិត $T$ ជានិច្ច។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "សំណើសមមូល $p \\Leftrightarrow q$ ពិត ($T$) លុះត្រាតែ៖", options: ["$p$ និង $q$ មានតម្លៃពិតដូចគ្នា", "$p$ ពិត និង $q$ មិនពិត", "$p$ មិនពិត និង $q$ ពិត", "សំណើទាំងពីរមានតម្លៃផ្ទុយគ្នា"], correct: 0, exp: "ឈ្នាប់ «សមមូល» $p \\Leftrightarrow q$ ពិតកាលណា $p$ និង $q$ មានតម្លៃពិតដូចគ្នា។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "បើ $p$ ពិត ($T$) និង $q$ មិនពិត ($F$) នោះតម្លៃពិតនៃ $p \\Leftrightarrow q$ គឺ៖", options: ["$F$", "$T$", "$T$ ឬ $F$", "គ្មានចម្លើយ"], correct: 0, exp: "ដោយសារតម្លៃពិតខុសគ្នា នោះ $T \\Leftrightarrow F \\equiv F$។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "តើសំណើណាដែលសមមូលនឹងសំណើលក្ខខណ្ឌ $p \\Rightarrow q$?", options: ["$\\neg p \\lor q$", "$p \\land \\neg q$", "$\\neg p \\land q$", "$p \\lor q$"], correct: 0, exp: "តាមច្បាប់តក្កវិទ្យា៖ $p \\Rightarrow q \\equiv \\neg p \\lor q$។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "បើ $p$ មិនពិត ($F$) និង $q$ ពិត ($T$) នោះតម្លៃពិតនៃ $\\neg p \\land q$ គឺ៖", options: ["$T$", "$F$", "$T$ ផង $F$ ផង", "មិនកំណត់"], correct: 0, exp: "$\\neg p = \\neg F = T$។ ដូចនេះ $T \\land T = T$។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "បើ $p$ ពិត ($T$) និង $q$ ពិត ($T$) នោះតម្លៃពិតនៃ $\\neg(p \\lor q)$ គឺ៖", options: ["$F$", "$T$", "ស្មើ $p$", "ស្មើ $q$"], correct: 0, exp: "$p \\lor q = T \\lor T = T$ នាំឱ្យ $\\neg(T) = F$។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "ច្បាប់ដឺម៉ូកង់ (De Morgan's Laws) ចែងថា $\\neg(p \\land q)$ សមមូលនឹង៖", options: ["$\\neg p \\lor \\neg q$", "$\\neg p \\land \\neg q$", "$p \\lor q$", "$\\neg p \\Rightarrow q$"], correct: 0, exp: "ច្បាប់ដឺម៉ូកង់៖ $\\neg(p \\land q) \\equiv \\neg p \\lor \\neg q$។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "ច្បាប់ដឺម៉ូកង់សម្រាប់ឈ្នាប់ «ឬ» $\\neg(p \\lor q)$ សមមូលនឹង៖", options: ["$\\neg p \\land \\neg q$", "$\\neg p \\lor \\neg q$", "$p \\land q$", "$\\neg p \\Leftrightarrow \\neg q$"], correct: 0, exp: "តាមច្បាប់ដឺម៉ូកង់៖ $\\neg(p \\lor q) \\equiv \\neg p \\land \\neg q$។" },
+      { level: 2, levelName: "កម្រិត ២ ៖ មធ្យមស្រាល", q: "សំណើ $p \\Rightarrow q$ ហៅថាសំណើបញ្ច្រាស (Converse) គឺ៖", options: ["$q \\Rightarrow p$", "$\\neg p \\Rightarrow \\neg q$", "$\\neg q \\Rightarrow \\neg p$", "$\\neg q \\lor p$"], correct: 0, exp: "សំណើបញ្ច្រាសនៃ $p \\Rightarrow q$ គឺ $q \\Rightarrow p$។" },
+
+      // --- កម្រិត ៣ (សំណួរ ២១ ដល់ ៣០) ---
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "សំណើប្រឆាំងពីសម្មតិកម្ម (Contrapositive) នៃ $p \\Rightarrow q$ គឺ៖", options: ["$\\neg q \\Rightarrow \\neg p$", "$q \\Rightarrow p$", "$\\neg p \\Rightarrow \\neg q$", "$p \\land \\neg q$"], correct: 0, exp: "សំណើប្រឆាំងពីសម្មតិកម្មនៃ $p \\Rightarrow q$ គឺ $\\neg q \\Rightarrow \\neg p$ ហើយវាមានតម្លៃពិតស្មើនឹង $p \\Rightarrow q$ ជានិច្ច។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "តើសំណើណាដែលជាសំណើផ្ទុយ (Inverse) នៃ $p \\Rightarrow q$?", options: ["$\\neg p \\Rightarrow \\neg q$", "$\\neg q \\Rightarrow \\neg p$", "$q \\Rightarrow p$", "$p \\lor \\neg q$"], correct: 0, exp: "សំណើផ្ទុយនៃ $p \\Rightarrow q$ គឺ $\\neg p \\Rightarrow \\neg q$។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "តារាងភាពពិតនៃសំណើដែលមាន ៣ អថេរ ($p, q, r$) មានចំនួនជួរដេកសរុបប៉ុន្មាន?", options: ["$8$ ជួរ", "$6$ ជួរ", "$9$ ជួរ", "$16$ ជួរ"], correct: 0, exp: "ចំនួនជួរដេក $= 2^3 = 8$ ជួរដេក។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "បើ $p=T, q=F, r=T$ តើតម្លៃពិតនៃ $(p \\land q) \\lor r$ ស្មើនឹងអ្វី?", options: ["$T$", "$F$", "មិនពិត", "មិនអាចគណនាបាន"], correct: 0, exp: "$p \\land q = T \\land F = F$។ បន្ទាប់មក $F \\lor r = F \\lor T = T$។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "បើ $p=F, q=T, r=F$ តើតម្លៃពិតនៃ $p \\Rightarrow (q \\land r)$ ស្មើនឹងអ្វី?", options: ["$T$", "$F$", "$T$ និង $F$", "គ្មានតម្លៃ"], correct: 0, exp: "ដោយសារសម្មតិកម្ម $p=F$ នោះ $F \\Rightarrow (\\dots)$ តែងតែមានតម្លៃពិត $T$ ជានិច្ច។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "តម្លៃពិតនៃសំណើ $\\neg p \\lor p$ គឺ៖", options: ["ពិត ($T$) ជានិច្ច", "មិនពិត ($F$) ជានិច្ច", "អាស្រ័យលើ $p$", "ស្មើ $0$"], correct: 0, exp: "$\\neg p \\lor p$ តែងតែពិតជានិច្ច (តូតូឡូជី)។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "តម្លៃពិតនៃសំណើ $p \\land \\neg p$ គឺ៖", options: ["មិនពិត ($F$) ជានិច្ច", "ពិត ($T$) ជានិច្ច", "ពិតខ្លះ មិនពិតខ្លះ", "មិនកំណត់"], correct: 0, exp: "$p \\land \\neg p \\equiv F$ ជានិច្ច (កាឡាស៊ី/Contradiction)។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "សំណើដែលតែងតែមានតម្លៃពិត «ពិត ($T$)» ជានិច្ចគ្រប់ករណី ហៅថា៖", options: ["តូតូឡូជី (Tautology)", "កាឡាស៊ី (Contradiction)", "សមមូល (Equivalence)", "សំណើទទេ"], correct: 0, exp: "តូតូឡូជី (Tautology) គឺជាសំណើដែលមានតម្លៃពិត $T$ គ្រប់ជួរទាំងអស់។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "សំណើដែលតែងតែមានតម្លៃពិត «មិនពិត ($F$)» ជានិច្ចគ្រប់ករណី ហៅថា៖", options: ["កាឡាស៊ី (Contradiction)", "តូតូឡូជី (Tautology)", "សំណើមិនប្រាកដ", "អនុគមន៍តក្កវិទ្យា"], correct: 0, exp: "កាឡាស៊ី (Contradiction) គឺជាសំណើដែលមានតម្លៃពិត $F$ គ្រប់ករណី។" },
+      { level: 3, levelName: "កម្រិត ៣ ៖ មធ្យមពិបាក", q: "បើ $p \\Leftrightarrow q$ ជាតូតូឡូជី មានន័យថាសំណើ $p$ និង $q$ គឺ៖", options: ["សមមូលតក្កវិទ្យានឹងគ្នា ($p \\equiv q$)", "ផ្ទុយគ្នានឹងគ្នា", "មិនទាក់ទងគ្នា", "មានតម្លៃ $F$ ដូចគ្នា"], correct: 0, exp: "កាលណា $p \\Leftrightarrow q$ ពិតជានិច្ច នោះសំណើ $p$ និង $q$ សមមូលគ្នា ($p \\equiv q$)។" },
+
+      // --- កម្រិត ៤ (សំណួរ ៣១ ដល់ ៤០) ---
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "តើសំណើ $(p \\land q) \\Rightarrow p$ ជាប្រភេទសំណើអ្វី?", options: ["តូតូឡូជី (Tautology)", "កាឡាស៊ី (Contradiction)", "សំណើមិនពិត", "សមមូលមិនពិត"], correct: 0, exp: "បើ $p \\land q = T \\implies p=T$ នាំឱ្យ $T \\Rightarrow T = T$។ បើ $p \\land q = F$ នាំឱ្យ $F \\Rightarrow p = T$ ជានិច្ច។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "ចូរកំណត់តម្លៃពិតនៃជួរឈរចុងក្រោយក្នុងតារាងភាពពិតនៃ $\\neg(p \\Rightarrow q)$៖", options: ["$F, T, F, F$", "$F, F, T, F$", "$T, F, T, T$", "$T, T, F, T$"], correct: 0, exp: "តារាងនៃ $p \\Rightarrow q$ គឺ $T, F, T, T$។ ដូច្នេះបដិសេធរបស់វា $\\neg(p \\Rightarrow q)$ គឺ $F, T, F, F$។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "តើសំណើណាដែលសមមូលនឹងសំណើបដិសេធនៃលក្ខខណ្ឌ $\\neg(p \\Rightarrow q)$?", options: ["$p \\land \\neg q$", "$\\neg p \\lor q$", "$\\neg p \\land q$", "$p \\lor \\neg q$"], correct: 0, exp: "$\\neg(p \\Rightarrow q) \\equiv \\neg(\\neg p \\lor q) \\equiv p \\land \\neg q$។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "តើសំណើ $p \\Rightarrow (p \\lor q)$ ជាតូតូឡូជីដែរឬទេ?", options: ["ជាតូតូឡូជី (ពិតគ្រប់ករណី)", "មិនមែនជាតូតូឡូជី", "ជាកាឡាស៊ី", "ពិតតែពេល $p=T$"], correct: 0, exp: "បើ $p=T \\implies p \\lor q = T \\implies T \\Rightarrow T = T$។ បើ $p=F \\implies F \\Rightarrow (\\dots) = T$ ជានិច្ច។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "បើ $p=T, q=F, r=F$ ចូរកំណត់តម្លៃពិតនៃ $(p \\lor q) \\Rightarrow (q \\lor r)$៖", options: ["$F$", "$T$", "មិនអាចកំណត់បាន", "ស្មើ $p$"], correct: 0, exp: "$p \\lor q = T \\lor F = T$។ ចំណែក $q \\lor r = F \\lor F = F$។ គេបាន $T \\Rightarrow F \\equiv F$។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "តើច្បាប់បំណែងចែក (Distributive Law) នៃ $p \\land (q \\lor r)$ សមមូលនឹងអ្វី?", options: ["$(p \\land q) \\lor (p \\land r)$", "$(p \\lor q) \\land (p \\lor r)$", "$(p \\land q) \\land r$", "$(p \\lor q) \\lor r$"], correct: 0, exp: "ច្បាប់បំណែងចែក៖ $p \\land (q \\lor r) \\equiv (p \\land q) \\lor (p \\land r)$។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "តើសំណើ $(p \\lor q) \\land (\\neg p \\land \\neg q)$ មានតម្លៃពិតស្មើនឹងអ្វី?", options: ["$F$ ជានិច្ច (កាឡាស៊ី)", "$T$ ជានិច្ច (តូតូឡូជី)", "ស្មើ $p$", "ស្មើ $q$"], correct: 0, exp: "តាមដឺម៉ូកង់ $\\neg p \\land \\neg q \\equiv \\neg(p \\lor q)$។ គេបាន $A \\land \\neg A \\equiv F$ ជានិច្ច។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "សំណើ $p \\Rightarrow q$ និងសំណើប្រឆាំងពីសម្មតិកម្ម $\\neg q \\Rightarrow \\neg p$ មានទំនាក់ទំនងយ៉ាងដូចម្តេច?", options: ["សមមូលគ្នាជានិច្ច", "ផ្ទុយគ្នាជានិច្ច", "មិនអាចប្រៀបធៀបបាន", "ពិតតែពេល $p$ ពិត"], correct: 0, exp: "សំណើលក្ខខណ្ឌ និងសំណើប្រឆាំងពីសម្មតិកម្មមានតារាងភាពពិតដូចគ្នាបេះបិទគ្រប់ករណី។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "បើ $p \\Rightarrow q$ ពិត និង $q \\Rightarrow r$ ពិត តើយើងអាចទាញសន្និដ្ឋានបានអ្វី (ច្បាប់ឆ្លង)?", options: ["$p \\Rightarrow r$ ពិត", "$r \\Rightarrow p$ ពិត", "$p \\land r$ ពិត", "$\\neg p \\Rightarrow r$ ពិត"], correct: 0, exp: "តាមច្បាប់ឆ្លងនៃតក្កវិទ្យា (Syllogism)៖ $(p \\Rightarrow q) \\land (q \\Rightarrow r) \\implies (p \\Rightarrow r)$។" },
+      { level: 4, levelName: "កម្រិត ៤ ៖ កម្រិតខ្ពស់", q: "កំណត់តម្លៃពិតនៃ $(p \\Leftrightarrow q)$ នៅពេល $p$ និង $q$ មានតម្លៃមិនពិត ($F$) ទាំងពីរ៖", options: ["$T$", "$F$", "មិនកំណត់", "ស្មើ $0$"], correct: 0, exp: "ព្រោះសំណើទាំងពីរមានតម្លៃដូចគ្នា ($F \\Leftrightarrow F$) ដូច្នេះតម្លៃពិតគឺ $T$។" },
+
+      // --- កម្រិត ៥ (សំណួរ ៤១ ដល់ ៥០) ---
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "តើសំណើ $[(p \\Rightarrow q) \\land p] \\Rightarrow q$ ត្រូវជាអ្វី?", options: ["តូតូឡូជី (Modus Ponens)", "កាឡាស៊ី", "សមមូលមិនពិត", "សំណើទទេ"], correct: 0, exp: "នេះជាវិធាន Modus Ponens ដែលជាតូតូឡូជី (ពិតជានិច្ចគ្រប់ករណី)។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "តើសំណើ $[(p \\Rightarrow q) \\land \\neg q] \\Rightarrow \\neg p$ ត្រូវជាអ្វី?", options: ["តូតូឡូជី (Modus Tollens)", "កាឡាស៊ី", "សំណើមិនពិត", "សមមូលលក្ខខណ្ឌ"], correct: 0, exp: "នេះជាវិធាន Modus Tollens ដែលជាតូតូឡូជី (ពិតគ្រប់ករណី)។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "ចូរកំណត់ចំនួនករណីដែលធ្វើឱ្យ $(p \\lor q) \\Rightarrow r$ មានតម្លៃមិនពិត ($F$) ក្នុងចំណោម ៨ ករណី៖", options: ["$3$ ករណី", "$1$ ករណី", "$4$ ករណី", "$2$ ករណី"], correct: 0, exp: "សំណើមិនពិតកាលណា $(p \\lor q)=T$ ហើយ $r=F$។ ករណីដែល $(p \\lor q)=T$ មាន ៣ ករណី (TT, TF, FT)។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "សម្រួលសំណើស្មុគស្មាញ $\\neg(p \\lor (\\neg p \\land q))$ ឱ្យទៅជាទម្រង់សាមញ្ញបំផុត៖", options: ["$\\neg p \\land \\neg q$", "$\\neg p \\lor \\neg q$", "$p \\land q$", "$p \\lor q$"], correct: 0, exp: "$p \\lor (\\neg p \\land q) \\equiv p \\lor q$។ នាំឱ្យបដិសេធរបស់វាគឺ $\\neg(p \\lor q) \\equiv \\neg p \\land \\neg q$។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "តើសំណើ $[(p \\lor q) \\land \\neg p] \\Rightarrow q$ ជាសំណើអ្វី?", options: ["តូតូឡូជី (Disjunctive Syllogism)", "កាឡាស៊ី", "សំណើមិនពិតជានិច្ច", "សំណើត្រួសៗ"], correct: 0, exp: "នេះជាវិធាន Disjunctive Syllogism ដែលជាតូតូឡូជី។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "បើ $p \\Leftrightarrow q$ មិនពិត ($F$) និង $q \\Leftrightarrow r$ មិនពិត ($F$) តើតម្លៃពិតនៃ $p \\Leftrightarrow r$ គឺជាអ្វី?", options: ["ពិត ($T$) ជានិច្ច", "មិនពិត ($F$) ជានិច្ច", "មិនអាចកំណត់បាន", "ស្មើ $\\neg p$"], correct: 0, exp: "បើ $p \\ne q$ និង $q \\ne r$ ក្នុងប្រព័ន្ធតម្លៃពីរ ($T, F$) នោះ $p$ និង $r$ ត្រូវតែមានតម្លៃដូចគ្នាជានិច្ច។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "ចូរកំណត់តម្លៃពិតនៃ $\\neg p \\Rightarrow (p \\Rightarrow q)$៖", options: ["តូតូឡូជី (ពិតជានិច្ច)", "កាឡាស៊ី (មិនពិតជានិច្ច)", "ពិតលុះត្រា $q$ ពិត", "អាស្រ័យលើ $p$"], correct: 0, exp: "បើ $\\neg p = T \\implies p = F$។ ពេល $p = F$ នោះសំណើខាងក្នុង $F \\Rightarrow q$ ពិត ($T$) ជានិច្ច។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "តើសំណើ $(p \\Rightarrow q) \\lor (q \\Rightarrow p)$ ជាប្រភេទសំណើអ្វី?", options: ["តូតូឡូជី (ពិតជានិច្ច)", "កាឡាស៊ី", "មិនពិតពេល $p \\ne q$", "ពិតតែពេល $p=q$"], correct: 0, exp: "ដើម្បីឱ្យឈ្នាប់ «ឬ» មិនពិត លុះត្រាតែទាំងពីរមិនពិតព្រមគ្នា ដែលមិនអាចកើតឡើងបានឡើយ។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "សំណើ $(p \\land q) \\lor (\\neg p \\land r) \\lor (q \\land r)$ សមមូលនឹងសំណើណា (Consensus Theorem)?", options: ["$(p \\land q) \\lor (\\neg p \\land r)$", "$(p \\lor q) \\land (\\neg p \\lor r)$", "$p \\land r$", "$q \\land r$"], correct: 0, exp: "តាមទ្រឹស្តីបទ Consensus Theorem តួ $(q \\land r)$ ជាតួលើសដែលអាចលុបចេញបាន។" },
+      { level: 5, levelName: "កម្រិត ៥ ៖ ពិបាកបំផុត", q: "ចូរកំណត់តម្លៃពិតនៃ $[p \\land (p \\Rightarrow q)] \\Rightarrow \\neg q$៖", options: ["មិនមែនជាតូតូឡូជី (មិនពិតពេល $p=T, q=T$)", "ជាតូតូឡូជី", "ជាកាឡាស៊ី", "ពិតគ្រប់ករណី"], correct: 0, exp: "បើ $p=T, q=T$ នោះ $[T \\land T] \\Rightarrow F \\equiv T \\Rightarrow F \\equiv F$។ ដូច្នេះវាមិនមែនជាតូតូឡូជីទេ។" },
+
+      // --- កម្រិត ៦៖ ២០ សំណួរតារាងភាពពិតបំពេញលេខ 0 និង 1 ដោយផ្ទាល់ (សំណួរ ៥១ ដល់ ៧០) ---
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញលេខ $0$ ឬ $1$ ក្នុងតារាងភាពពិតនៃសំណើបដិសេធ $\\neg p$ ខាងក្រោម ៖",
+        tableHeader: ["$p$", "$\\neg p$"],
+        tableRows: [["1", "input_0"], ["0", "input_1"]],
+        correctAnswers: ["0", "1"],
+        exp: "បដិសេធនៃ 1 គឺ 0 និងបដិសេធនៃ 0 គឺ 1 (ចម្លើយជួរឈរគឺ 0, 1)។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញលេខ $0$ ឬ $1$ ក្នុងតារាងភាពពិតនៃឈ្នាប់ «និង» $p \\land q$ ៖",
+        tableHeader: ["$p$", "$q$", "$p \\land q$"],
+        tableRows: [["1", "1", "input_0"], ["1", "0", "input_1"], ["0", "1", "input_2"], ["0", "0", "input_3"]],
+        correctAnswers: ["1", "0", "0", "0"],
+        exp: "ឈ្នាប់ «និង» ស្មើ 1 តែពេលទាំងពីរស្មើ 1។ ដូចនេះតម្លៃគឺ 1, 0, 0, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញលេខ $0$ ឬ $1$ ក្នុងតារាងភាពពិតនៃឈ្នាប់ «ឬ» $p \\lor q$ ៖",
+        tableHeader: ["$p$", "$q$", "$p \\lor q$"],
+        tableRows: [["1", "1", "input_0"], ["1", "0", "input_1"], ["0", "1", "input_2"], ["0", "0", "input_3"]],
+        correctAnswers: ["1", "1", "1", "0"],
+        exp: "ឈ្នាប់ «ឬ» ស្មើ 0 តែពេលទាំងពីរស្មើ 0។ ដូចនេះតម្លៃគឺ 1, 1, 1, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញលេខ $0$ ឬ $1$ ក្នុងតារាងភាពពិតនៃឈ្នាប់ «នាំឱ្យ» $p \\Rightarrow q$ ៖",
+        tableHeader: ["$p$", "$q$", "$p \\Rightarrow q$"],
+        tableRows: [["1", "1", "input_0"], ["1", "0", "input_1"], ["0", "1", "input_2"], ["0", "0", "input_3"]],
+        correctAnswers: ["1", "0", "1", "1"],
+        exp: "$p \\Rightarrow q$ ស្មើ 0 តែពេល $1 \\Rightarrow 0$។ ដូចនេះតម្លៃគឺ 1, 0, 1, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញលេខ $0$ ឬ $1$ ក្នុងតារាងភាពពិតនៃឈ្នាប់ «សមមូល» $p \\Leftrightarrow q$ ៖",
+        tableHeader: ["$p$", "$q$", "$p \\Leftrightarrow q$"],
+        tableRows: [["1", "1", "input_0"], ["1", "0", "input_1"], ["0", "1", "input_2"], ["0", "0", "input_3"]],
+        correctAnswers: ["1", "0", "0", "1"],
+        exp: "សមមូលស្មើ 1 កាលណាមានតម្លៃដូចគ្នា (1-1 ឬ 0-0)។ ដូចនេះតម្លៃគឺ 1, 0, 0, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $\\neg p \\land q$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$\\neg p$", "$\\neg p \\land q$"],
+        tableRows: [["1", "1", "0", "input_0"], ["1", "0", "0", "input_1"], ["0", "1", "1", "input_2"], ["0", "0", "1", "input_3"]],
+        correctAnswers: ["0", "0", "1", "0"],
+        exp: "$0\\land1=0, 0\\land0=0, 1\\land1=1, 1\\land0=0$។ ដូចនេះតម្លៃគឺ 0, 0, 1, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $p \\lor \\neg q$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$\\neg q$", "$p \\lor \\neg q$"],
+        tableRows: [["1", "1", "0", "input_0"], ["1", "0", "1", "input_1"], ["0", "1", "0", "input_2"], ["0", "0", "1", "input_3"]],
+        correctAnswers: ["1", "1", "0", "1"],
+        exp: "$1\\lor0=1, 1\\lor1=1, 0\\lor0=0, 0\\lor1=1$។ ដូចនេះតម្លៃគឺ 1, 1, 0, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $\\neg(p \\land q)$ (NAND) ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$p \\land q$", "$\\neg(p \\land q)$"],
+        tableRows: [["1", "1", "1", "input_0"], ["1", "0", "0", "input_1"], ["0", "1", "0", "input_2"], ["0", "0", "0", "input_3"]],
+        correctAnswers: ["0", "1", "1", "1"],
+        exp: "បដិសេធនៃជួរឈរ 1, 0, 0, 0 គឺ 0, 1, 1, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $\\neg(p \\lor q)$ (NOR) ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$p \\lor q$", "$\\neg(p \\lor q)$"],
+        tableRows: [["1", "1", "1", "input_0"], ["1", "0", "1", "input_1"], ["0", "1", "1", "input_2"], ["0", "0", "0", "input_3"]],
+        correctAnswers: ["0", "0", "0", "1"],
+        exp: "បដិសេធនៃជួរឈរ 1, 1, 1, 0 គឺ 0, 0, 0, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $\\neg p \\Rightarrow q$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$\\neg p$", "$\\neg p \\Rightarrow q$"],
+        tableRows: [["1", "1", "0", "input_0"], ["1", "0", "0", "input_1"], ["0", "1", "1", "input_2"], ["0", "0", "1", "input_3"]],
+        correctAnswers: ["1", "1", "1", "0"],
+        exp: "$0\\Rightarrow1=1, 0\\Rightarrow0=1, 1\\Rightarrow1=1, 1\\Rightarrow0=0$។ ដូចនេះតម្លៃគឺ 1, 1, 1, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $(p \\land q) \\Rightarrow p$ (តូតូឡូជី) ក្នុងតារាងភាពពិត ៖",
+        tableHeader: ["$p$", "$q$", "$p \\land q$", "លទ្ធផល"],
+        tableRows: [["1", "1", "1", "input_0"], ["1", "0", "0", "input_1"], ["0", "1", "0", "input_2"], ["0", "0", "0", "input_3"]],
+        correctAnswers: ["1", "1", "1", "1"],
+        exp: "នេះជាតូតូឡូជី (ពិតគ្រប់ករណី 1, 1, 1, 1)។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $\\neg(p \\Rightarrow q)$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$p \\Rightarrow q$", "$\\neg(p \\Rightarrow q)$"],
+        tableRows: [["1", "1", "1", "input_0"], ["1", "0", "0", "input_1"], ["0", "1", "1", "input_2"], ["0", "0", "1", "input_3"]],
+        correctAnswers: ["0", "1", "0", "0"],
+        exp: "បដិសេធនៃជួរឈរ 1, 0, 1, 1 គឺ 0, 1, 0, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $\\neg p \\lor \\neg q$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$\\neg p$", "$\\neg q$", "លទ្ធផល"],
+        tableRows: [["1", "1", "0", "0", "input_0"], ["1", "0", "0", "1", "input_1"], ["0", "1", "1", "0", "input_2"], ["0", "0", "1", "1", "input_3"]],
+        correctAnswers: ["0", "1", "1", "1"],
+        exp: "តាមច្បាប់ដឺម៉ូកង់ $\\neg p \\lor \\neg q \\equiv \\neg(p \\land q)$ តម្លៃគឺ 0, 1, 1, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $(p \\lor q) \\land \\neg p$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$p \\lor q$", "$\\neg p$", "លទ្ធផល"],
+        tableRows: [["1", "1", "1", "0", "input_0"], ["1", "0", "1", "0", "input_1"], ["0", "1", "1", "1", "input_2"], ["0", "0", "0", "1", "input_3"]],
+        correctAnswers: ["0", "0", "1", "0"],
+        exp: "$1\\land0=0, 1\\land0=0, 1\\land1=1, 0\\land1=0$។ ដូចនេះតម្លៃគឺ 0, 0, 1, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $(p \\Leftrightarrow q) \\land p$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$p \\Leftrightarrow q$", "លទ្ធផល"],
+        tableRows: [["1", "1", "1", "input_0"], ["1", "0", "0", "input_1"], ["0", "1", "0", "input_2"], ["0", "0", "1", "input_3"]],
+        correctAnswers: ["1", "0", "0", "0"],
+        exp: "$1\\land1=1, 0\\land1=0, 0\\land0=0, 1\\land0=0$។ ដូចនេះតម្លៃគឺ 1, 0, 0, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញតម្លៃ ៤ ជួរដេកចុងក្រោយក្នុងតារាង ៣ អថេរនៃ $(p \\land q) \\lor r$ ៖",
+        tableHeader: ["$p$", "$q$", "$r$", "លទ្ធផល"],
+        tableRows: [
+          ["1", "1", "1", "1"], ["1", "1", "0", "1"], ["1", "0", "1", "1"], ["1", "0", "0", "0"],
+          ["0", "1", "1", "input_0"], ["0", "1", "0", "input_1"], ["0", "0", "1", "input_2"], ["0", "0", "0", "input_3"]
+        ],
+        correctAnswers: ["1", "0", "1", "0"],
+        exp: "សម្រាប់ ៤ ជួរដេកចុងក្រោយ $p\\land q = 0$ នាំឱ្យ $(0)\\lor r = r$។ ដោយសារតម្លៃ $r$ គឺ 1, 0, 1, 0 នោះចម្លើយគឺ 1, 0, 1, 0។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $(p \\Rightarrow q) \\land (q \\Rightarrow p)$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$p \\Rightarrow q$", "$q \\Rightarrow p$", "លទ្ធផល"],
+        tableRows: [["1", "1", "1", "1", "input_0"], ["1", "0", "0", "1", "input_1"], ["0", "1", "1", "0", "input_2"], ["0", "0", "1", "1", "input_3"]],
+        correctAnswers: ["1", "0", "0", "1"],
+        exp: "នេះជានិយមន័យនៃសមមូល $p \\Leftrightarrow q$ ដែលមានតម្លៃស្មើ 1, 0, 0, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $[(p \\Rightarrow q) \\land p] \\Rightarrow q$ (វិធាន Modus Ponens) ៖",
+        tableHeader: ["$p$", "$q$", "$p \\Rightarrow q$", "A: $(p \\Rightarrow q) \\land p$", "A $\\Rightarrow q$"],
+        tableRows: [["1", "1", "1", "1", "input_0"], ["1", "0", "0", "0", "input_1"], ["0", "1", "1", "0", "input_2"], ["0", "0", "1", "0", "input_3"]],
+        correctAnswers: ["1", "1", "1", "1"],
+        exp: "វិធាន Modus Ponens គឺជាតូតូឡូជី (1, 1, 1, 1)។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $(p \\lor q) \\Rightarrow (p \\land q)$ ក្នុងតារាងភាពពិតខាងក្រោម ៖",
+        tableHeader: ["$p$", "$q$", "$p \\lor q$", "$p \\land q$", "លទ្ធផល"],
+        tableRows: [["1", "1", "1", "1", "input_0"], ["1", "0", "1", "0", "input_1"], ["0", "1", "1", "0", "input_2"], ["0", "0", "0", "0", "input_3"]],
+        correctAnswers: ["1", "0", "0", "1"],
+        exp: "$1\\Rightarrow1=1, 1\\Rightarrow0=0, 1\\Rightarrow0=0, 0\\Rightarrow0=1$។ ដូចនេះតម្លៃគឺ 1, 0, 0, 1។"
+      },
+      {
+        level: 6, levelName: "កម្រិត ៦ ៖ បំពេញតារាងភាពពិត (0 & 1)",
+        isFillTable: true,
+        q: "ចូរបំពេញជួរឈរ $(p \\Leftrightarrow q) \\Leftrightarrow (\\neg p \\Leftrightarrow \\neg q)$ ៖",
+        tableHeader: ["$p$", "$q$", "$p \\Leftrightarrow q$", "$\\neg p \\Leftrightarrow \\neg q$", "លទ្ធផល"],
+        tableRows: [["1", "1", "1", "1", "input_0"], ["1", "0", "0", "0", "input_1"], ["0", "1", "0", "0", "input_2"], ["0", "0", "1", "1", "input_3"]],
+        correctAnswers: ["1", "1", "1", "1"],
+        exp: "សំណើទាំងពីរមានតម្លៃពិតដូចគ្នាបេះបិទគ្រប់ជួរ ដូច្នេះសមមូលរវាងពួកវាគឺ 1, 1, 1, 1 (តូតូឡូជី)។"
+      }
+    ];
+
+    // APPLICATION STATE
+    let allQuestions = [];
+    let currentStudent = { name: '', gender: 'ប្រុស', grade: '១០ A', school: '' };
+    let userAnswers = {};
+    let currentQuestionIdx = 0;
+    let timerInterval = null;
+    let secondsLeft = 5400; // 90 minutes
+    let focusedInputId = null;
+
+    // SHUFFLE HELPER (FISHER-YATES SHUFFLE)
+    function shuffleArray(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // PREPARE QUESTIONS WITH SHUFFLED OPTIONS
+    function prepareQuestions() {
+      allQuestions = rawQuestions.map(item => {
+        if (item.isFillTable) {
+          return { ...item };
+        }
+
+        // Shuffle options for MCQ (Questions 1 to 50)
+        const correctText = item.options[item.correct];
+        const shuffledOpts = shuffleArray(item.options);
+        const newCorrectIdx = shuffledOpts.indexOf(correctText);
+
+        return {
+          ...item,
+          options: shuffledOpts,
+          correct: newCorrectIdx
+        };
+      });
+    }
+
+    // 1. START QUIZ
+    function startQuiz() {
+      const name = document.getElementById('stu-name').value.trim();
+      const school = document.getElementById('stu-school').value.trim();
+      const grade = document.getElementById('stu-grade').value.trim();
+      const gender = document.getElementById('stu-gender').value;
+
+      if (!name || !school) {
+        alert("សូមបំពេញឈ្មោះ និងសាលារៀនរបស់ប្អូនឱ្យបានពេញលេញ!");
+        return;
+      }
+
+      currentStudent = { name, gender, grade, school };
+      userAnswers = {};
+      currentQuestionIdx = 0;
+      secondsLeft = 5400; // 90 mins
+
+      // Shuffle options randomly each exam session
+      prepareQuestions();
+
+      document.getElementById('view-profile').classList.add('hidden');
+      document.getElementById('view-result').classList.add('hidden');
+      document.getElementById('view-quiz').classList.remove('hidden');
+      document.getElementById('quiz-header-status').classList.remove('hidden');
+
+      startTimer();
+      renderCurrentQuestion();
+    }
+
+    // 2. RENDER QUESTION
+    function renderCurrentQuestion() {
+      const qData = allQuestions[currentQuestionIdx];
+      document.getElementById('current-q-num').textContent = currentQuestionIdx + 1;
+      document.getElementById('progress-bar').style.width = `${((currentQuestionIdx + 1) / 70) * 100}%`;
+
+      document.getElementById('header-stage-badge').textContent = `សំណួរ ${currentQuestionIdx + 1}/៧០`;
+      document.getElementById('quiz-level-indicator').textContent = qData.levelName;
+      document.getElementById('badge-level-tag').textContent = `សំណួរទី ${currentQuestionIdx + 1} (${qData.levelName})`;
+
+      document.getElementById('answered-count-badge').textContent = Object.keys(userAnswers).length;
+      document.getElementById('question-text').innerHTML = `សំណួរទី ${currentQuestionIdx + 1} ៖ ${qData.q}`;
+
+      const optionsContainer = document.getElementById('options-container');
+      const tableContainer = document.getElementById('table-interactive-container');
+      const tableMount = document.getElementById('table-display-mount');
+
+      // MODE A: INTERACTIVE FILL-IN TABLE (Questions 51-70)
+      if (qData.isFillTable) {
+        optionsContainer.classList.add('hidden');
+        tableContainer.classList.remove('hidden');
+
+        const userTableVals = userAnswers[currentQuestionIdx] || [];
+
+        let tableHtml = `<table class="interactive-table border-collapse rounded-xl overflow-hidden shadow-xl bg-slate-900/90 my-2"><thead><tr>`;
+        qData.tableHeader.forEach(h => { tableHtml += `<th>${h}</th>`; });
+        tableHtml += `</tr></thead><tbody>`;
+
+        qData.tableRows.forEach(row => {
+          tableHtml += `<tr>`;
+          row.forEach(cell => {
+            if (cell.startsWith('input_')) {
+              const inputIndex = parseInt(cell.split('_')[1], 10);
+              const val = userTableVals[inputIndex] !== undefined ? userTableVals[inputIndex] : '';
+              tableHtml += `<td>
+                <input 
+                  type="text" 
+                  maxlength="1" 
+                  id="cell-in-${inputIndex}" 
+                  value="${val}" 
+                  class="table-cell-input" 
+                  onfocus="focusedInputId = 'cell-in-${inputIndex}'"
+                  oninput="handleCellInput(${inputIndex}, this)"
+                />
+              </td>`;
+            } else {
+              tableHtml += `<td class="text-slate-200 font-bold">${cell}</td>`;
+            }
+          });
+          tableHtml += `</tr>`;
+        });
+        tableHtml += `</tbody></table>`;
+        tableMount.innerHTML = tableHtml;
+
+      } else {
+        // MODE B: MULTIPLE CHOICE (Questions 1-50 WITH SHUFFLED CHOICES)
+        tableContainer.classList.add('hidden');
+        optionsContainer.classList.remove('hidden');
+
+        const optionLetters = ['A', 'B', 'C', 'D'];
+        const selected = userAnswers[currentQuestionIdx];
+
+        optionsContainer.innerHTML = qData.options.map((opt, idx) => `
+          <div onclick="selectOption(${idx})" class="option-card p-4 rounded-2xl bg-slate-900/90 border border-slate-700/80 cursor-pointer flex items-center justify-between ${selected === idx ? 'selected' : ''}">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-xs font-bold text-slate-300 font-mono">
+                ${optionLetters[idx]}
+              </span>
+              <span class="text-sm font-semibold text-white tracking-wide">${opt}</span>
+            </div>
+            <div class="w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center ${selected === idx ? 'border-brand-cyan bg-brand-cyan text-slate-950' : ''}">
+              ${selected === idx ? '<i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>' : ''}
+            </div>
+          </div>
+        `).join('');
+      }
+
+      document.getElementById('btn-prev').disabled = (currentQuestionIdx === 0);
+      const isLast = (currentQuestionIdx === allQuestions.length - 1);
+      document.getElementById('btn-next-label').textContent = isLast ? 'បញ្ចប់ការប្រឡង' : 'សំណួរបន្ទាប់';
+
+      lucide.createIcons();
+      renderMathInElement(document.getElementById('view-quiz'), {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ]
+      });
+    }
+
+    function handleCellInput(inputIdx, inputElem) {
+      let val = inputElem.value.trim();
+      if (val !== '0' && val !== '1') {
+        inputElem.value = '';
+        return;
+      }
+
+      if (!userAnswers[currentQuestionIdx]) {
+        userAnswers[currentQuestionIdx] = [];
+      }
+      userAnswers[currentQuestionIdx][inputIdx] = val;
+
+      const nextInput = document.getElementById(`cell-in-${inputIdx + 1}`);
+      if (nextInput) {
+        nextInput.focus();
+      }
+
+      document.getElementById('answered-count-badge').textContent = Object.keys(userAnswers).length;
+    }
+
+    function setFocusedInputValue(val) {
+      if (focusedInputId) {
+        const input = document.getElementById(focusedInputId);
+        if (input) {
+          input.value = val;
+          input.dispatchEvent(new Event('input'));
+        }
+      }
+    }
+
+    function selectOption(idx) {
+      userAnswers[currentQuestionIdx] = idx;
+      renderCurrentQuestion();
+    }
+
+    function navigateQuestion(delta) {
+      const nextIdx = currentQuestionIdx + delta;
+      if (nextIdx >= 0 && nextIdx < allQuestions.length) {
+        currentQuestionIdx = nextIdx;
+        renderCurrentQuestion();
+      } else if (nextIdx >= allQuestions.length) {
+        const answeredCount = Object.keys(userAnswers).length;
+        if (answeredCount < 70) {
+          if (!confirm(`ប្អូនបានឆ្លើយបានតែ ${answeredCount}/70 សំណួរប៉ុណ្ណោះ។ តើប្អូនពិតជាចង់បញ្ចប់ការប្រឡងឥឡូវនេះមែនទេ?`)) {
+            return;
+          }
+        }
+        finishQuiz();
+      }
+    }
+
+    function startTimer() {
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        if (secondsLeft > 0) {
+          secondsLeft--;
+          const m = String(Math.floor(secondsLeft / 60)).padStart(2, '0');
+          const s = String(secondsLeft % 60).padStart(2, '0');
+          document.getElementById('timer-display').textContent = `${m}:${s}`;
+        } else {
+          clearInterval(timerInterval);
+          alert("អស់ពេលហើយ! ប្រព័ន្ធនឹងគណនាលទ្ធផលជូនប្អូនដោយស្វ័យប្រវត្តិ។");
+          finishQuiz();
+        }
+      }, 1000);
+    }
+
+    // 3. FINISH QUIZ & SHOW CERTIFICATE / RESULT
+    function finishQuiz() {
+      clearInterval(timerInterval);
+
+      let totalScore = 0;
+      let sectionScores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
+      let sectionTotals = { 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 20 };
+
+      allQuestions.forEach((q, idx) => {
+        if (q.isFillTable) {
+          const userArr = userAnswers[idx] || [];
+          const isCorrect = q.correctAnswers.every((ans, aIdx) => userArr[aIdx] === ans);
+          if (isCorrect) {
+            totalScore++;
+            sectionScores[q.level]++;
+          }
+        } else {
+          if (userAnswers[idx] === q.correct) {
+            totalScore++;
+            sectionScores[q.level]++;
+          }
+        }
+      });
+
+      const percentage = Math.round((totalScore / 70) * 100);
+      const timeSpentSec = 5400 - secondsLeft;
+      const spentMin = String(Math.floor(timeSpentSec / 60)).padStart(2, '0');
+      const spentSec = String(timeSpentSec % 60).padStart(2, '0');
+
+      document.getElementById('res-stu-name').textContent = currentStudent.name;
+      document.getElementById('res-stu-class').textContent = `${currentStudent.gender} / ${currentStudent.grade}`;
+      document.getElementById('res-stu-school').textContent = currentStudent.school;
+
+      document.getElementById('res-score-badge').textContent = `${totalScore}/70`;
+      document.getElementById('res-percentage-badge').textContent = `${percentage}%`;
+      document.getElementById('res-time-spent').textContent = `${spentMin}:${spentSec}`;
+
+      const breakdownRow = document.getElementById('levels-breakdown-row');
+      const labels = { 1: 'កម្រិត ១', 2: 'កម្រិត ២', 3: 'កម្រិត ៣', 4: 'កម្រិត ៤', 5: 'កម្រិត ៥', 6: 'តារាង 0 & 1' };
+      breakdownRow.innerHTML = [1, 2, 3, 4, 5, 6].map(lvl => `
+        <div class="p-2 rounded-xl bg-slate-900 border border-slate-700">
+          <span class="text-slate-400 block text-[10px]">${labels[lvl]}</span>
+          <strong class="${(sectionScores[lvl] / sectionTotals[lvl]) >= 0.7 ? 'text-emerald-400' : 'text-amber-400'} text-xs font-mono">${sectionScores[lvl]}/${sectionTotals[lvl]}</strong>
+        </div>
+      `).join('');
+
+      let gradeVerdict = "និទ្ទេស A (ល្អប្រសើរណាស់)";
+      let gradeColor = "text-emerald-400";
+      if (percentage < 50) {
+        gradeVerdict = "និទ្ទេស F (ធ្លាក់ - ត្រូវខិតខំរៀនបន្ថែម)";
+        gradeColor = "text-rose-400";
+      } else if (percentage < 65) {
+        gradeVerdict = "និទ្ទេស E/D (មធ្យម)";
+        gradeColor = "text-amber-400";
+      } else if (percentage < 80) {
+        gradeVerdict = "និទ្ទេស C/B (ល្អបង្គួរ)";
+        gradeColor = "text-blue-400";
+      }
+      const gradeElem = document.getElementById('res-grade-badge');
+      gradeElem.textContent = gradeVerdict;
+      gradeElem.className = `text-sm font-bold block mt-2 ${gradeColor}`;
+
+      if (percentage >= 70) {
+        document.getElementById('certificate-heading').textContent = "បណ្ណសរសើរជ័យលាភីតក្កវិទ្យា";
+      } else {
+        document.getElementById('certificate-heading').textContent = "ព្រឹត្តិបត្រលទ្ធផលតេស្ត";
+      }
+
+      document.getElementById('res-date').textContent = new Date().toLocaleDateString('km-KH', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      const reviewContainer = document.getElementById('answers-review-container');
+      const letters = ['A', 'B', 'C', 'D'];
+      reviewContainer.innerHTML = allQuestions.map((q, idx) => {
+        let isCorrect = false;
+        let userPickText = "";
+        let correctText = "";
+
+        if (q.isFillTable) {
+          const userArr = userAnswers[idx] || [];
+          isCorrect = q.correctAnswers.every((ans, aIdx) => userArr[aIdx] === ans);
+          userPickText = userArr.length > 0 ? userArr.join(", ") : "មិនបានបំពេញ";
+          correctText = q.correctAnswers.join(", ");
+        } else {
+          const userPick = userAnswers[idx];
+          isCorrect = (userPick === q.correct);
+          userPickText = userPick !== undefined ? letters[userPick] + '. ' + q.options[userPick] : 'មិនបានឆ្លើយ';
+          correctText = letters[q.correct] + '. ' + q.options[q.correct];
+        }
+
+        return `
+          <div class="p-3.5 rounded-2xl bg-slate-900 border ${isCorrect ? 'border-emerald-500/40 bg-emerald-950/10' : 'border-rose-500/40 bg-rose-950/10'} text-xs space-y-1.5">
+            <div class="flex items-center justify-between font-bold">
+              <span class="text-white">${idx + 1}. [${q.levelName}] ${q.q}</span>
+              <span class="${isCorrect ? 'text-emerald-400' : 'text-rose-400'}">${isCorrect ? '✓ ត្រឹមត្រូវ' : '✗ មិនត្រឹមត្រូវ'}</span>
+            </div>
+            <div class="text-[11px] text-slate-400 font-mono">
+              ចម្លើយរបស់អ្នក ៖ <strong class="${isCorrect ? 'text-emerald-300' : 'text-rose-300'}">${userPickText}</strong> | 
+              ចម្លើយត្រឹមត្រូវ ៖ <strong class="text-emerald-300">${correctText}</strong>
+            </div>
+            <div class="text-[11px] text-amber-300/90 pt-1 border-t border-slate-800">
+              💡 ពន្យល់ ៖ ${q.exp}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('view-quiz').classList.add('hidden');
+      document.getElementById('quiz-header-status').classList.add('hidden');
+      document.getElementById('view-result').classList.remove('hidden');
+
+      lucide.createIcons();
+      renderMathInElement(document.getElementById('printable-certificate'), {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false }
+        ]
+      });
+
+      if (percentage >= 70) {
+        confetti({ particleCount: 150, spread: 90, origin: { y: 0.6 } });
+      }
+    }
+
+    // 4. DOWNLOAD CERTIFICATE / RESULT AS PNG IMAGE
+    function downloadAsImage() {
+      const element = document.getElementById('printable-certificate');
+      const btn = document.getElementById('btn-download-img');
+      const originalText = btn.innerHTML;
+
+      btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i><span>កំពុងបង្កើតរូបភាព...</span>`;
+      lucide.createIcons();
+
+      html2canvas(element, {
+        scale: 2.5,
+        backgroundColor: '#0A0F1D',
+        useCORS: true,
+        logging: false
+      }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = `ព្រឹត្តិបត្រតក្កវិទ្យា_${currentStudent.name.replace(/\s+/g, '_')}_70Questions.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        btn.innerHTML = originalText;
+        lucide.createIcons();
+      }).catch(err => {
+        console.error("Canvas error:", err);
+        alert("មានបញ្ហាក្នុងការទាញយករូបភាព។ សូមសាកល្បងម្ដងទៀត!");
+        btn.innerHTML = originalText;
+        lucide.createIcons();
+      });
+    }
+
+    function restartFullExam() {
+      document.getElementById('view-result').classList.add('hidden');
+      document.getElementById('view-profile').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
